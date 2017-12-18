@@ -40,13 +40,12 @@ class Scraper
         end
     end
 
+    profile_hash[:profile_url] = profile_url
     profile_hash[:profile_quote] = profile.css("div.profile-quote").text
     profile_hash[:bio] = profile.css("div.description-holder p").text
     profile_hash
     # binding.pry
   end
 end
-
-Scraper.scrape_profile_page("./fixtures/student-site/students/joe-burgess.html")
 
 # link.css("a").attribute("href").text
